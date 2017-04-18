@@ -1,0 +1,54 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      
+      
+      <script type="text/javascript" src="qandj.js".js></script>
+      <script>
+        clickCounter = 0;
+        arrowDisplayed = false;
+      
+      
+      </script>
+  </head>
+  <body>
+
+    <div id="wrapper">
+        <audio controls id="musicControls">
+            <source src="resources/music/seeyouagain.mp3" type="audio/mp3">
+            
+        </audio>
+        <br/>
+        <div id="arrowWrapper"><img src="resources/imgs/click_arrow.png" id="clickMeArrow"/></div>
+        
+        <div id="main"><h1 class="person">Quang&nbsp;</h1><h1 id="and">or&nbsp;</h1><h1 class="person">Jack</h1>
+              <div id="imageWrapper">
+                <img id="image"/> 
+            </div>
+            <h2>An ode to a beautiful friendship.</h2>
+            <br><br>        
+        </div>
+    </div> 
+  </body>
+        <script>
+          $('.person').click(function() {
+            displayImagesOnPerson(this);
+            clickCounter++;
+              if (clickCounter > 6 && arrowDisplayed == false){
+                  displayArrow(true);
+                  arrowDisplayed = true;
+              }
+          });
+            $('#and').click(function() {
+            andOr(this);
+          });           
+        window.onload = function() {
+            musicControls.play();
+        };    
+        </script>
+        
+</html>
+
+
